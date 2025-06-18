@@ -1,65 +1,36 @@
-# -Nextjs-auth-app-
-🚀 Features
-🔐 Google Sign-In with Firebase Authentication
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-🍪 Access & Refresh Token management using HTTP-only cookies
+## Getting Started
 
-♻️ Token refresh system to keep users logged in securely
+First, run the development server:
 
-🔄 Redux Toolkit for global auth state management
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-🎨 Responsive UI inspired by payment gateways (like Razorpay, Stripe, etc.)
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-🧭 Protected routes with session verification
+You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-🌐 Built with Next.js App Router (13+)
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-🧱 Tech Stack
-Frontend: Next.js (App Router), Tailwind CSS, Redux Toolkit
+## Learn More
 
-Authentication: Firebase Auth (Google Sign-In)
+To learn more about Next.js, take a look at the following resources:
 
-Backend: Custom REST API for token validation & refresh
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-Storage: Cookies (HTTP-only for secure tokens)
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-Tools: ESLint, Prettier, GitHub
+## Deploy on Vercel
 
-📁 Project Structure
-bash
-Copy
-Edit
-.
-├── app/
-│   ├── login/
-│   ├── dashboard/
-│   └── layout.js
-├── components/
-│   ├── AuthForm.jsx
-│   └── Sidebar.jsx
-├── redux/
-│   └── authSlice.js
-├── utils/
-│   └── verifyToken.js
-├── pages/
-│   └── api/
-│       ├── login.js
-│       └── refresh.js
-├── .env.local
-└── README.md
-🔧 How It Works
-User logs in with Google (via Firebase)
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Firebase issues an ID token
-
-The token is sent to a custom backend API (/api/login)
-
-Backend issues:
-
-Access Token (short-lived) stored in cookie
-
-Refresh Token (long-lived) stored in cookie
-
-Auth state is managed with Redux
-
-On session expiration, /api/refresh is used to renew tokens silently
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
